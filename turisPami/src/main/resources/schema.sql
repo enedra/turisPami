@@ -74,7 +74,7 @@ CREATE TABLE IF NOT exists Destinos (
 );
 
 CREATE TABLE if not exists Empleados (
-	id int(11) not null auto_increment primary key,
+    id int(11) not null auto_increment primary key,
     dni int(11) NOT NULL,
     nombre varchar(56) NOT NULL,
     direccion varchar(56) NOT NULL,

@@ -10,16 +10,14 @@ import com.google.gson.Gson;
 
 public class Jubilado extends Model{
 	
-	private int dni;
+	private Integer dni;
 	private String name;
 	private String direction;
 	private String tel;
 	
-	public Jubilado(){
-	
-	}
+	public Jubilado(){	}
 
-	public Jubilado(String nombre, Integer documento, String direccion, String telefono){
+	public Jubilado(String nombre, Integereger documento, String direccion, String telefono){
     	set("name", nombre);
     	set("dni", documento);
     	set("direccion", direccion);
@@ -30,11 +28,11 @@ public class Jubilado extends Model{
         return this.getString("name");
     }
 
-    public Integer getDocumento() {
-        return this.getInteger("dni");
+    public Integereger getDocumento() {
+        return this.getIntegereger("dni");
     }
 
-    public int getDireccion() {
+    public Integer getDireccion() {
         return this.getString("direccion");
 	}
 
@@ -42,17 +40,17 @@ public class Jubilado extends Model{
         return this.getString("tell");
 	}
 
-	public User getJubilado(int id){
+	public Jubilado getJubilado(Integer id){
 		Jubilado j = Jubilado.findById(id);
 		return j;
 	}
 
-	public void deleteUser(int id){
+	public void deleteJubilado(Integer id){
 		Jubilado j = Jubilado.findById(id);
 		j.delete();
 	}
 
-	public void createJubilado(String nombre, Integer documento, String direccion, String telefono){
+	public void createJubilado(String nombre, Integereger documento, String direccion, String telefono){
 		Jubilado jubilado = new Jubilado(nombre, documento, direccion, telefono);
 		jubilado.saveIt();
 	}
